@@ -1,15 +1,15 @@
 package Transformers.Transformers;
 
 import CarSimulation.Car;
-import world.Monstre;
+import world.Monster;
 
 public class Transformer {
 
 	private Car car;
-	private Monstre monster;
+	private Monster monster;
 	private double power;
 
-	public Transformer(Car c, Monstre m) {
+	public Transformer(Car c, Monster m) {
 		this.car = c;
 		this.monster = m;
 		this.power = m.getHeight() * c.getCapacite();
@@ -23,11 +23,11 @@ public class Transformer {
 		this.car = voiture;
 	}
 
-	public Monstre getMonster() {
+	public Monster getMonster() {
 		return monster;
 	}
 
-	public void setMonster(Monstre monster) {
+	public void setMonster(Monster monster) {
 		this.monster = monster;
 	}
 
@@ -40,11 +40,11 @@ public class Transformer {
 	}
 
 	public void attack(Transformer opponent) {
-		if(opponent.getPower() > this.getPower()) {
-			QuickAttackStrategy strategy = new  QuickAttackStrategy();
+		if (opponent.getPower() > this.getPower()) {
+			QuickAttackStrategy strategy = new QuickAttackStrategy();
 			strategy.attack(this, opponent);
 		} else {
-			AllPowerStrategy strategy = new  AllPowerStrategy();
+			AllPowerStrategy strategy = new AllPowerStrategy();
 			strategy.attack(this, opponent);
 		}
 	}

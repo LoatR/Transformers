@@ -9,13 +9,13 @@ import CarSimulation.Car;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import world.Monstre;
+import world.Monster;
 
 public class US_200_BattleTest {
 	private Transformer octopus;
 	private Transformer flipper;
 	private List<Car> cars;
-	private List<Monstre> monsters;
+	private List<Monster> monsters;
 	private Battle battle;
 	private Transformer winner;
 	
@@ -24,9 +24,9 @@ public class US_200_BattleTest {
 	    this.cars = new ArrayList<Car>();
 	    cars.add(new Car(40, 500));
 	    cars.add(new Car(23, 1945));
-	    this.monsters = new ArrayList<Monstre>();
-	    monsters.add(new Monstre("poulpe",3.24));
-	    monsters.add(new Monstre("dauphin", 1.93));
+	    this.monsters = new ArrayList<Monster>();
+	    monsters.add(new Monster("poulpe",3.24));
+	    monsters.add(new Monster("dauphin", 1.93));
 	    
 	    this.octopus = new Transformer(cars.get(1), monsters.get(0));
 	    this.flipper = new Transformer(cars.get(0), monsters.get(1));

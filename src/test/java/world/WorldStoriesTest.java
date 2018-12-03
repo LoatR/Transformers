@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 public class WorldStoriesTest {
 	
 	Creature dobby;
-	Monstre loupGarou;
+	Monster loupGarou;
 	boolean dieuVeut;
 
 	@Given("^la creation d une creature$")
@@ -20,14 +20,14 @@ public class WorldStoriesTest {
 
 	@Given("^d un monstre$")
 	public void d_un_monstre() throws Throwable {
-	    loupGarou = new Monstre();
+	    loupGarou = new Monster();
 	}
 
 	@When("^Dieu le veut$")
 	public void dieu_le_veut() throws Throwable {
 		dieuVeut = (Math.random() < 0.5);
 		if(dieuVeut) {
-			dobby.setMeilleurAmi(loupGarou);
+			dobby.setBestFriend(loupGarou);
 		}
 	}
 

@@ -12,21 +12,21 @@ public class MonstreTest {
 	
 	@Test
 	public void testMonstre() {
-		Monstre monstre = new Monstre();
-		assertEquals("Le petit nom du monstre", "John", monstre.getNom());
+		Monster monstre = new Monster();
+		assertEquals("Le petit nom du monstre", "John", monstre.getName());
 	}
 	
 	@Test
 	public void testChangerNom() {
-		Monstre monstre = new Monstre();
-		String monPetitNom = monstre.getNom();
-		monstre.setNom("casimir");
-		assertNotSame("Changement de nom", monstre.getNom(), monPetitNom);		
+		Monster monstre = new Monster();
+		String monPetitNom = monstre.getName();
+		monstre.setName("casimir");
+		assertNotSame("Changement de nom", monstre.getName(), monPetitNom);		
 	}
 	
 	@Test
 	public void testAmitie() {
-		Monstre monpremierMonstre = new Monstre();
+		Monster monpremierMonstre = new Monster();
 		assertEquals("Je suis John et je suis l'ami de Jack", monpremierMonstre.toString());
 	}
 

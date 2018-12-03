@@ -4,59 +4,59 @@ import java.util.ArrayList;
 
 public class Creature {
 	
-	private String nom;
+	private String name;
 	private Type type;
-	private Monstre meilleurAmi;	
-	private ArrayList<Monstre> esclaves;
+	private Monster bestFriend;	
+	private ArrayList<Monster> slaves;
 
 	public Creature() {
-		this.nom = "Jack";
+		this.name = "Jack";
 		this.type = Type.Yéti;
-		this.esclaves = new ArrayList<Monstre>();
+		this.slaves = new ArrayList<Monster>();
 	}
 	
 	Creature(String name, Type type){
-		this.nom = name;
+		this.name = name;
 		this.type = type;
-		this.esclaves = new ArrayList<Monstre>();
+		this.slaves = new ArrayList<Monster>();
 	}
 
-	public String getNom() {
-		return this.nom;
+	public String getName() {
+		return this.name;
 	}
 
 	public Type getType() {
 		return this.type;
 	}
 
-	public Monstre getMeilleurAmi() {
-		return meilleurAmi;
+	public Monster getBestFriend() {
+		return bestFriend;
 	}
 
-	public void setMeilleurAmi(Monstre meilleurAmi) {
-		this.meilleurAmi = meilleurAmi;
+	public void setBestFriend(Monster meilleurAmi) {
+		this.bestFriend = meilleurAmi;
 	}
 
 	
-	public ArrayList<Monstre> getEsclaves() {
-		return esclaves;
+	public ArrayList<Monster> getEsclaves() {
+		return slaves;
 	}
 
-	public void setEsclaves(ArrayList<Monstre> esclaves) {
-		this.esclaves = esclaves;
+	public void setEsclaves(ArrayList<Monster> esclaves) {
+		this.slaves = esclaves;
 	}
 
-	public void asservir(Monstre monstre) {
-		esclaves.add(monstre);
+	public void enslave(Monster monstre) {
+		slaves.add(monstre);
 	}
 	
-	public void définirMeilleurAmi(Monstre futurMeilleurAmi) {
-		this.setMeilleurAmi(futurMeilleurAmi);
-		futurMeilleurAmi.setMeilleurAmi(this);
+	public void pickBestFriend(Monster futurMeilleurAmi) {
+		this.setBestFriend(futurMeilleurAmi);
+		futurMeilleurAmi.setBestFriend(this);
 	}
 	
 	public String toString() {
-		return "Je suis " + this.nom + " le " + this.type;
+		return "I am " + this.name + " and my type is " + this.type;
 	}
 
 }

@@ -3,12 +3,12 @@ import CarSimulation.Car;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import world.Monstre;
+import world.Monster;
 import static org.junit.Assert.*;
 
 public class US_100_TransformerTest {
 	private Car car;
-	private Monstre monster;
+	private Monster monster;
 	private Transformer bill;
 
 	
@@ -21,7 +21,7 @@ public class US_100_TransformerTest {
 	@Given("^a Monster$")
 	public void a_Monster() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
-	   this.monster = new Monstre("Shrek",2);
+	   this.monster = new Monster("Shrek",2);
 	}
 
 	@When("^a Creature wants$")
